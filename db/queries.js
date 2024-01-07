@@ -12,28 +12,8 @@ const db = mysql.createConnection({
 
 //createing a method on a class:
 class Queries {
-  constructor(
-    db
-    // depNameInput,
-    // roleTitleInput,
-    // salaryInput,
-    // deparmentIdInput,
-    // employeeID,
-    // firstNameInput,
-    // lastNameInput,
-    // roleIdInput,
-    // managerIdInput
-  ) {
+  constructor(db) {
     this.db = db;
-    // this.depNameInput = depNameInput;
-    // this.roleTitleInput = roleTitleInput;
-    // this.salaryInput = salaryInput;
-    // this.deparmentIdInput = deparmentIdInput;
-    // this. employeeID = employeeID;
-    // this. firstNameInput = firstNameInput;
-    // this.lastNameInput = lastNameInput;
-    // this.roleIdInput = roleIdInput;
-    // this.managerIdInput = managerIdInput;
   }
   findAllEmployees() {
     return this.db.promise().query("SELECT * FROM employees;");

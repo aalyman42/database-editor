@@ -1,18 +1,6 @@
 const inquirer = require("inquirer");
 const mysql = require("mysql2");
 const queries = require("./db/queries.js");
-// console.log(queries);
-
-// queries
-//   .findAllDepartments()
-//   .then((data) => {
-//     const dataField = data;
-//     const arrayData = dataField[0];
-//     console.log(dataField);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
 
 const mainMenu = function (message) {
   inquirer
