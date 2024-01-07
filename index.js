@@ -269,7 +269,8 @@ id   |    first name   |    last name   |  role ID      | manager ID
           });
       }
       if (choice == "Quit") {
-        return console.log("goodbye!");
+        console.log("goodbye!");
+        return process.exit();
       }
     });
 };
