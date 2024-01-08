@@ -16,13 +16,18 @@ class Queries {
     this.db = db;
   }
   findAllEmployees() {
-    return this.db.promise().query("SELECT * FROM employees;");
+    return this.db.promise()
+      .query(`SELECT employees.id, employees.first_name, employees.last_name, roles.title AS role, departments.name AS department, roles.salary AS salary, employees.manager_id FROM employees
+      JOIN roles ON employees.role_id = roles.id
+      JOIN departments ON roles.department_id = departments.id;`);
   }
   findAllDepartments() {
     return this.db.promise().query("SELECT * FROM departments;");
   }
   findAllRoles() {
-    return this.db.promise().query("SELECT * FROM roles;");
+    return this.db.promise()
+      .query(`Select roles.id, roles.title, roles.salary, departments.name AS department FROM roles
+    JOIN departments ON roles.department_id = departments.id;`);
   }
   addDepartment(depNameInput) {
     return this.db

@@ -53,11 +53,11 @@ id   name
             const dataField = data;
             const arrayData = dataField[0];
             console.log(`
-id   title                salary   department ID          
+id   title                salary   department           
 ---- -------------------- -------- -------------`);
             for (i = 0; i < arrayData.length; i++) {
               console.log(
-                `${arrayData[i].id}    ${arrayData[i].title}                ${arrayData[i].salary}   ${arrayData[i].department_id} `
+                `${arrayData[i].id}    ${arrayData[i].title}           ${arrayData[i].salary}   ${arrayData[i].department} `
               );
             }
             console.log(`
@@ -78,11 +78,11 @@ id   title                salary   department ID
             const dataField = data;
             const arrayData = dataField[0];
             console.log(`
-id   |    first name   |    last name   |  role ID      | manager ID    
----------------------------------------------------------------------------------`);
+id   |    first name   |    last name   |  role            | department       |  Salary      | Manager_ID
+---------------------------------------------------------------------------------------------------------------`);
             for (i = 0; i < arrayData.length; i++) {
               console.log(
-                `${arrayData[i].id}    |   ${arrayData[i].first_name}       | ${arrayData[i].last_name}       |${arrayData[i].role_id}          |${arrayData[i].manager_id}`
+                `${arrayData[i].id}    |   ${arrayData[i].first_name}       | ${arrayData[i].last_name}       |${arrayData[i].role}          |${arrayData[i].department}   | ${arrayData[i].salary}     | ${arrayData[i].manager_id}`
               );
             }
             console.log(`
