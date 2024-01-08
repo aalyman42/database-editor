@@ -33,7 +33,7 @@ const mainMenu = function (message) {
 id   name             
 ---- ---------------`);
             for (i = 0; i < arrayData.length; i++) {
-              console.log(`${arrayData[i].id}    ${arrayData[i].name}  `);
+              console.log(`${arrayData[i].id}   | ${arrayData[i].name}  `);
             }
             console.log(`
             
@@ -57,7 +57,7 @@ id   title                salary   department
 ---- -------------------- -------- -------------`);
             for (i = 0; i < arrayData.length; i++) {
               console.log(
-                `${arrayData[i].id}    ${arrayData[i].title}           ${arrayData[i].salary}   ${arrayData[i].department} `
+                `${arrayData[i].id}  |  ${arrayData[i].title}        |   ${arrayData[i].salary}  | ${arrayData[i].department} `
               );
             }
             console.log(`

@@ -6,20 +6,16 @@ const db = mysql.createConnection({
   password: "Rootpass423!",
   database: "employee_db",
 });
-//
 
-//Class returns an object. create a class that has protype methods on it.
-
-//createing a method on a class:
 class Queries {
   constructor(db) {
     this.db = db;
   }
   findAllEmployees() {
     return this.db.promise()
-      .query(`SELECT employees.id, employees.first_name, employees.last_name, roles.title AS role, departments.name AS department, roles.salary AS salary, employees.manager_id FROM employees
-      JOIN roles ON employees.role_id = roles.id
-      JOIN departments ON roles.department_id = departments.id;`);
+      .query(`SELECT employees.id, employees.first_name, employees.last_name, roles.title AS role, departments.name AS department,  roles.salary AS salary, employees.manager_id FROM employees
+    JOIN roles ON employees.role_id = roles.id
+    JOIN departments ON roles.department_id = departments.id;`);
   }
   findAllDepartments() {
     return this.db.promise().query("SELECT * FROM departments;");
